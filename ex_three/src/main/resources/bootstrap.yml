@@ -1,0 +1,19 @@
+# 应用名称
+spring:
+  application:
+    name: ex_three
+  cloud:
+    nacos:
+      discovery:
+        service: ex_three
+        server-addr: 127.0.0.1:8848
+#        namespace: aee0716b-a7e4-4146-973f-7f6ced5f2991
+        group: DEFAULT_GROUP,dd-driving,dev  #无效只有指定命名空间
+
+server:
+  port: 8089
+
+feign:
+  hystrix:
+    enabled: true
+

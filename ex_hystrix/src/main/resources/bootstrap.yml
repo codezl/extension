@@ -1,0 +1,13 @@
+# 应用名称
+spring:
+  application:
+    name: ex_hystrix
+  cloud:
+    nacos:
+      discovery:
+        #配置服务互相调用发现时，需要配置相同的group
+#        group: dd-driving
+        server-addr: 127.0.0.1:8848
+        group: DEFAULT_GROUP
+
+

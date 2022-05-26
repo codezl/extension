@@ -1,0 +1,38 @@
+# 应用名称
+#spring:
+#  application:
+#    name: ex_hystrix
+#  elasticsearch:
+#    rest:
+#      uris:
+
+#eureka:
+#  client:
+#    service-url:
+#      defaultZone: http://127.0.0.1:10761/eureka/
+#  instance:
+#    prefer-ip-address: true
+server:
+  port: 8090
+
+spring:
+  cloud:
+    gateway:
+#      routes:
+#        - id: payment_route # 路由的id,没有规定规则但要求唯一,建议配合服务名
+#          #匹配后提供服务的路由地址
+#          uri: http://www.baidu.com
+#          predicates:
+#            - Path=/payment/get/** # 断言，路径相匹配的进行路由
+      discovery:
+        locator:
+          enabled: true
+          lower-case-service-id: true  #服务发现名小写
+      routes:
+        - id: ex_hystrix
+          uri: http://localhost:8083
+#          order: 8092
+          predicates:
+            - Path=/prefix/**
+          filters:
+            - StripPrefix=1

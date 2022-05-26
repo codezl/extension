@@ -1,0 +1,14 @@
+spring:
+  application:
+    name: nacos-consumer
+  cloud:
+    nacos:
+      server-addr: 127.0.0.1:8848
+      discovery:
+        server-addr: 127.0.0.1:8848
+        namespace: aee0716b-a7e4-4146-973f-7f6ced5f2991
+  datasource:
+    url: jdbc:postgresql://api2.zhanxiaoxia.com.cn:25432/driving_agent?stringtype=unspecified
+    username: dd_driver
+    password: DD_driver_2511582
+    type: com.alibaba.druid.pool.DruidDataSource

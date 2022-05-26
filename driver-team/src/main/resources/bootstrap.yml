@@ -1,0 +1,21 @@
+# 应用名称
+spring:
+  application:
+    name: driver-team
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 192.168.4.40:8848
+        group: dd-driving
+      config:
+        server-addr: 192.168.4.40:8848
+        group: dd-driving
+        file-extension: yaml
+        extension-configs:
+          - data-id: common.yaml
+            group: dd-driving
+        username: nacos
+        password: nacos
+server:
+  port: 1008
+

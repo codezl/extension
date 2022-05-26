@@ -1,0 +1,16 @@
+# 应用名称
+spring:
+  application:
+    name: dd-team
+  datasource:
+    test1:
+      driver-class-name: com.mysql.cj.jdbc.Driver
+      jdbc-url: jdbc:mysql://localhost:3306/test?serverTimezone=Asia/Shanghai&useUnicode=true&characterEncoding=utf8&useSSL=false
+      username: root
+      password: root
+
+    test2:
+      driver-class-name: com.mysql.cj.jdbc.Driver
+      jdbc-url: jdbc:mysql://106.52.38.218:3306/yshop_1?serverTimezone=Asia/Shanghai&useUnicode=true&characterEncoding=utf8&useSSL=false
+      username: yshop_1
+      password: fdLYsN2KtrA7nsNK

@@ -1,0 +1,20 @@
+spring:
+  application:
+    name: nacos-provider
+  cloud:
+    nacos:
+      server-addr: 127.0.0.1:8848
+      discovery:
+        server-addr: 127.0.0.1:8848,192.168.4.52:8848
+        namespace: aee0716b-a7e4-4146-973f-7f6ced5f2991
+        group: DEFAULT_GROUP
+        service: nacos-provider  #默认是spring.application.name
+        metadata: {name:'zs'}
+      config:
+        namespace: aee0716b-a7e4-4146-973f-7f6ced5f2991
+        group: DEFAULT_GROUP
+        extension-configs:
+          - data-id: nacos-pro
+        file-extension: properties
+#        refresh-enabled: true
+#- data-id: nacos-pro 不能使用除了yml和properties的后缀名
